@@ -1,0 +1,16 @@
+@import "/resources/sap/ui/core/themes/base/global.css";
+.controlSquare {
+  border: 1px solid #e5e5e5;
+  background-color: #3e7bae;
+  margin: 1rem;
+  text-align: center;
+  font-weight: bold;
+  padding-top: 1rem;
+  display: inline-block;
+}
+.controlSquareRound {
+  border-radius: 1rem;
+}
+
+/* Inline theming parameters */
+#sap-ui-theme-com\.cerner\.scp\.augero\.common\.controls{background-image:url('data:text/plain;utf-8,%7B%7D')}

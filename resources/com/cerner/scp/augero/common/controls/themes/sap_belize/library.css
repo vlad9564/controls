@@ -1,0 +1,135 @@
+@import "/resources/sap/ui/core/themes/base/global.css";
+.controlSquare {
+  border: 1px solid #e5e5e5;
+  background-color: #3e7bae;
+  margin: 1rem;
+  text-align: center;
+  font-weight: bold;
+  padding-top: 1rem;
+  display: inline-block;
+}
+.controlSquareRound {
+  border-radius: 1rem;
+}
+/* some more fancy styles in sap_belize theme */
+.controlSquare {
+  background: #3e7bae;
+  /* Old browsers */
+  background: linear-gradient(to bottom, #add8e6 0%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  color: black;
+  text-shadow: grey 1px 1px 0.5rem;
+  font-size: 2rem;
+}
+.controlSquareRound {
+  border-radius: 2rem;
+}
+/*
+
+Css selector: 
+ If we have for example __btn-cancel0-BDI-content, __btn-cancel1-BDI-content and __btn-cancel3-BDI-content
+ we can use bdi[id*='btn-cancel'][id$='BDI-content'] to write css for all ids who starts with btn-cancel and
+ end with BDI-content or even only content. (bdi is out type in this case, it can be div, span etc, your html element)
+*/
+div[id*='notificationDialog'] {
+  min-width: 24.7rem;
+}
+div[id*='notificationDialog'][id$='BarPH'] {
+  box-shadow: inset 0 -0.125rem #bb0000;
+}
+span[id*='notificationDialog'][id$='icon'] {
+  color: #bb0000;
+}
+div[id*='notificationDialog'][id$='footer'] {
+  background-color: white;
+  border-top: 1px solid lightgrey;
+}
+button[id*='btn-cancel']:hover,
+button[id*='btn-discard']:hover,
+span[id*='btn-cancel'][id$='inner']:hover,
+span[id*='btn-discard'][id$='inner']:hover,
+span[id*='btn-save'][id$='inner']:hover {
+  background: transparent;
+}
+button[id*='btn-cancel'],
+button[id*='btn-discard'] {
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  height: 2rem;
+  border: 1px solid #e5e5e5;
+  width: 4.7rem;
+}
+button[id*='btn-save'] {
+  background-color: #3e7bae;
+  border-radius: 5px;
+  height: 2rem;
+  width: 4.7rem;
+}
+bdi[id*='btn-cancel'][id$='BDI-content'],
+bdi[id*='btn-discard'][id$='BDI-content'] {
+  text-shadow: none;
+  color: #3e7bae;
+}
+bdi[id*='btn-save'][id$='BDI-content'] {
+  text-shadow: none;
+  color: white;
+}
+span[id*='btn-cancel'][id$='inner'],
+span[id*='btn-discard'][id$='inner'],
+span[id*='btn-save'][id$='inner'] {
+  top: -8px;
+}
+.sapContrast.controlSquare,
+.sapContrast .controlSquare {
+  border: 1px solid #e5e5e5;
+  background-color: #3e7bae;
+}
+
+.sapContrast.controlSquare,
+.sapContrast .controlSquare {
+  background: #3e7bae;
+  background: linear-gradient(to bottom, #add8e6 0%);
+  color: black;
+  text-shadow: grey 1px 1px 0.5rem;
+}
+
+.sapContrast span[id*='notificationDialog'][id$='icon'] {
+  color: #bb0000;
+}
+
+.sapContrast div[id*='notificationDialog'][id$='footer'] {
+  background-color: white;
+  border-top: 1px solid lightgrey;
+}
+
+.sapContrast button[id*='btn-cancel']:hover,
+.sapContrast button[id*='btn-discard']:hover,
+.sapContrast span[id*='btn-cancel'][id$='inner']:hover,
+.sapContrast span[id*='btn-discard'][id$='inner']:hover,
+.sapContrast span[id*='btn-save'][id$='inner']:hover {
+  background: transparent;
+}
+
+.sapContrast button[id*='btn-cancel'],
+.sapContrast button[id*='btn-discard'] {
+  background-color: #f2f2f2;
+  border: 1px solid #e5e5e5;
+}
+
+.sapContrast button[id*='btn-save'] {
+  background-color: #3e7bae;
+}
+
+.sapContrast bdi[id*='btn-cancel'][id$='BDI-content'],
+.sapContrast bdi[id*='btn-discard'][id$='BDI-content'] {
+  text-shadow: none;
+  color: #3e7bae;
+}
+
+.sapContrast bdi[id*='btn-save'][id$='BDI-content'] {
+  text-shadow: none;
+  color: white;
+}
+
+/* Inline theming parameters */
+#sap-ui-theme-com\.cerner\.scp\.augero\.common\.controls{background-image:url('data:text/plain;utf-8,%7B%22default%22%3A%7B%7D%2C%22scopes%22%3A%7B%22sapContrast%22%3A%7B%7D%7D%7D')}

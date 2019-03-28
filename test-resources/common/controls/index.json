@@ -1,0 +1,30 @@
+{
+    "common.controls": {
+        "icon": "sap-icon://wrench",
+        "name": "common.controls",
+        "description": "com.cerner.scp.augero.common.controls - geometrical controls",
+
+        "license": "Apache 2.0",
+        "version": "1.0.0",
+        "content": {
+            "controls": {
+                "id": "custom",
+                "name": "controls",
+                "type": "control",
+                "description": "com.cerner.scp.augero.common.controls examples",
+                "samples": [{
+                        "id": "Example",
+                        "name": "Simple Example",
+                        "description": "Minimalistic example - simple square with text"
+                    },
+                    {
+                        "id": "NotificationDialog",
+                        "name": "Notification Dialog",
+                        "description": "Creates and displays an sap.m.Dialog with type NotificationDialog with message, 3 buttons [CANCEL, DISCARD, SAVE] and the title \"Unsaved changes\""
+
+                    }
+                ]
+            }
+        }
+    }
+}

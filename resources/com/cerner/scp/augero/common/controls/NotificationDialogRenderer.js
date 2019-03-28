@@ -1,0 +1,1 @@
+sap.ui.define([],function(){"use strict";var t={};t.render=function(t,e){t.write("<div");t.writeControlData(e);t.addClass("controlNotificationDialog");t.writeClasses();if(e){t.addStyle("width",e.getSize()+"px");t.addStyle("height",e.getSize()+"px");t.writeStyles()}t.write(">");t.writeEscaped(e.getText());t.write("</div>")};return t},true);

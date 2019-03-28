@@ -1,0 +1,67 @@
+{
+  "_version": "1.9.0",
+  "sap.app": {
+    "id": "com.cerner.scp.augero.common.controls",
+    "type": "library",
+    "embeds": [],
+    "i18n": " messagebundle.properties",
+    "applicationVersion": {
+      "version": "1.4.0"
+    },
+    "title": ">{{title}}",
+    "description": "Custom controls",
+    "resources": "resources.json",
+    "offline": false
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    },
+    "supportedThemes": [
+      "base",
+      "sap_belize",
+      "sap_belize_plus"
+    ]
+  },
+  "sap.ui5": {
+    "dependencies": {
+      "minUI5Version": "1.64",
+      "libs": {
+        "sap.ui.core": {
+          "minVersion": "1.64.0"
+        }
+      }
+    },
+    "contentDensities": {
+      "cozy": false,
+      "compact": true
+    },
+    "library": {
+      "i18n": false,
+      "content": {
+        "controls": [
+          "com.cerner.scp.augero.common.controls.Example",
+          "com.cerner.scp.augero.common.controls.NotificationDialog"
+        ],
+        "elements": [],
+        "types": [],
+        "interfaces": []
+      }
+    }
+  },
+  "sap.fiori": {
+    "registrationIds": [
+      null
+    ],
+    "archeType": "reusecomponent"
+  },
+  "sap.platform.abap": {
+    "uri": "/sap/bc/ui5_ui5/sap/undefined"
+  },
+  "sap.platform.hcp": {
+    "uri": ""
+  }
+}
