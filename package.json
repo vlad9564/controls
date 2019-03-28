@@ -1,0 +1,39 @@
+{
+    "name": "common-controls",
+    "version": "1.4.0",
+    "publishConfig": {
+        "registry": "https://cernerrepos.net/api/npm/npm"
+    },
+    "homepage": "https://vlad9564.github.io/controls",
+    "devDependencies": {
+        "@ui5/cli": "^0.2.1",
+        "ajv": "6.5.2",
+        "eslint": "^5.2.0",
+        "fs-extra": "^3.0.0",
+        "ui5lab-browser": "1.0.0",
+        "in-publish": "^2.0.0",
+        "gh-pages": "^2.0.1"
+    },
+    "common": {
+        "namespace": "common.controls",
+        "icon": "database",
+        "displayName": "controls"
+    },
+    "main": "Gruntfile.js",
+    "scripts": {
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d build",
+        "clean": "rm -rf dist",
+        "build": "ui5 build",
+        "prepare": "node prepare.js",
+        "start": "ui5 serve --open ./test-resources/common/browser/index.html"
+    },
+    "license": "CERNER",
+    "dependencies": {
+        "@openui5/sap.f": "^1.58.4",
+        "@openui5/sap.m": "^1.58.4",
+        "@openui5/sap.ui.core": "^1.58.4",
+        "@openui5/sap.ui.layout": "^1.58.4",
+        "@openui5/themelib_sap_belize": "^1.58.4"
+    }
+}

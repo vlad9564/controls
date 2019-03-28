@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title> NotificationDialog </title>
+
+    <base href="../../../../">
+    <!--[if lte IE 9]><script>
+	(function() {
+		var baseTag = document.getElementsByTagName('base')[0];
+		baseTag.href = baseTag.href;
+	})();
+	</script><![endif]-->
+
+    <script id="sap-ui-bootstrap" src="resources/sap-ui-core.js" data-sap-ui-libs="com.cerner.scp.augero.common.controls" data-sap-ui-theme="sap_belize">
+    </script>
+
+    <script>
+        sap.ui.getCore().attachInit(function() {
+            openMessageBox = function() {
+                sap.ui.require(['com/cerner/scp/augero/common/controls/NotificationDialog'], function(NotificationDialog) {
+                    
+                    var myMessage = "The _myMessage_ contains unsaved changes.\n How would you like to proceed?"
+
+                    NotificationDialog.unsavedChanges(myMessage, {
+                        onClose: function(oAction) {
+                            if (oAction === NotificationDialog.Action.CANCEL) {
+                                alert("Cancel button pressed");
+                            } else if (oAction === NotificationDialog.Action.DISCARD) {
+                                alert("Discard button pressed");
+                            } else if (oAction === NotificationDialog.Action.SAVE) {
+                                alert("Save button pressed");
+                            }
+                        }
+                    });
+                });
+            }
+
+            jQuery.sap.require("sap.m.MessageBox");
+
+            new sap.m.Button({
+                text: "Open Notification Dialog - unsaved changes",
+                press: openMessageBox
+            }).placeAt("content");
+
+        });
+    </script>
+</head>
+
+<body id="content" class="sapUiBody" style="height:100vh; width:100vw;">
+</body>
+
+</html>
